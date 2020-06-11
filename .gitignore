@@ -49,7 +49,7 @@ buildNumber.properties
 *.code-workspace
 
 ### VisualStudioCode Patch ###
-# Ignore all local history of files
+# Ignore all local history of filesi
 .history
-
+.*
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,java,maven
