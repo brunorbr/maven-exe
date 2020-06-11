@@ -36,4 +36,13 @@ public class Veiculo {
     public CategoriaVeiculo getCategoria(){
         return categoria;
     }
+
+    @Override
+    public String toString(){
+        return "========Veiculo========
+        Placa: " + getPlaca() +
+        "Marca: " + getMarca() +
+        "Cor: " + getCor() +
+        "Categoria: " + getCategoria();
+    }
 }

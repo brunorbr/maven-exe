@@ -25,7 +25,7 @@ public class Motorista {
         return cpf;
     }
 
-    public String nome(){
+    public String getNome(){
         return nome;
     }
 
@@ -35,5 +35,14 @@ public class Motorista {
 
     public FormaPagamento getFormaPgto(){
         return formaPgto;
+    }
+
+    @Override
+    public String toString(){
+        return "======Motorista======
+        CPF: " + getCpf() +
+        "Nome: " + getNome() + 
+        "Veiculo: " + getVeiculo().toString() + 
+        "Forma de Pagamento: " + getFormaPgto();
     }
 }

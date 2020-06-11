@@ -13,7 +13,11 @@ public class PersistenciaMotorista {
 
     private ArrayList<Motorista> listaMotorista;
 
-        public ArrayList<Motorista> carregaMotorista(String csvPath) {
+    public PersistenciaMotorista(){
+        this.listaMotorista = new ArrayList<Motorista>();
+    }
+
+    public ArrayList<Motorista> carregaMotorista(String csvPath) {
         try {
             Reader in = new FileReader(csvPath);
             Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(in);
