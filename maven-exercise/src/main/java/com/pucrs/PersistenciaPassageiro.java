@@ -10,7 +10,11 @@ import org.apache.commons.csv.CSVRecord;
 public class PersistenciaPassageiro {
     private ArrayList<Passageiro> listaPassageiro;
 
-        public ArrayList<Passageiro> carregaPassageiro(String csvPath) {
+    public PersistenciaPassageiro(){
+        this.listaPassageiro = new ArrayList<Passageiro>();
+    }
+
+    public ArrayList<Passageiro> carregaPassageiro(String csvPath) {
         try {
             Reader in = new FileReader(csvPath);
             Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(in);
@@ -19,7 +23,7 @@ public class PersistenciaPassageiro {
                 listaPassageiro.add(new Passageiro(record.get("cpf"),
                                               record.get("nome"),
                                               Enum.valueOf(FormaPagamento.class, 
-                                              record.get("formaPgto")),
+                                              record.get("formPgto")),
                                               record.get("nroCartao")));
             }
         } catch (Exception e) {

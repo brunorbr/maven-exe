@@ -10,7 +10,7 @@ import org.apache.commons.csv.CSVRecord;
 public class PersistenciaVeiculo {
     private static ArrayList<Veiculo> listaVeiculos;
 
-    public static ArrayList<Veiculo> carregaVeiculos(String csvPath) {
+    public static ArrayList<Veiculo> carregaVeiculo(String csvPath) {
         try {
             Reader in = new FileReader(csvPath);
             Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(in);
