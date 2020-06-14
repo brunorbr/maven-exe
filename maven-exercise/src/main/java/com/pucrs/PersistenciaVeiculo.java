@@ -10,10 +10,6 @@ import org.apache.commons.csv.CSVRecord;
 public class PersistenciaVeiculo {
     private static ArrayList<Veiculo> listaVeiculos;
 
-    public static PersistenciaVeiculo(){
-        this.listaVeiculos = new ArrayList<Veiculo>();
-    }
-
     public static ArrayList<Veiculo> carregaVeiculo(String csvPath) {
         try {
             Reader in = new FileReader(csvPath);

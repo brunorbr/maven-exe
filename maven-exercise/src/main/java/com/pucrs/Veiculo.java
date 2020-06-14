@@ -29,7 +29,7 @@ public class Veiculo {
         return marca;
     }
 
-    public String cor(){
+    public String getCor(){
         return cor;
     }
 
@@ -39,8 +39,8 @@ public class Veiculo {
 
     @Override
     public String toString(){
-        return "========Veiculo========
-        Placa: " + getPlaca() +
+        return "========Veiculo========" + 
+        "Placa: " + getPlaca() +
         "Marca: " + getMarca() +
         "Cor: " + getCor() +
         "Categoria: " + getCategoria();

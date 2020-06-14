@@ -23,7 +23,7 @@ public class PersistenciaPassageiro {
                 listaPassageiro.add(new Passageiro(record.get("cpf"),
                                               record.get("nome"),
                                               Enum.valueOf(FormaPagamento.class, 
-                                              record.get("formaPgto")),
+                                              record.get("formPgto")),
                                               record.get("nroCartao")));
             }
         } catch (Exception e) {

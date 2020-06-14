@@ -1,32 +1,33 @@
 package com.pucrs;
 
-/**
- * Hello world!
- * ALO
- */
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
 public class App 
 {
-    private PersistenciaVeiculo veiculos;
-    private PersistenciaMotorista motoristas;
-    private PerstienciaPassageiro passageiros;
+    private static ArrayList<Veiculo> veiculos;
+    private static ArrayList<Motorista> motoristas;
+    private static ArrayList<Passageiro> passageiros;
 
 
     public static void main( String[] args ){
-        motoristas = new PersistenciaMotorista();
-        passageiros = new PerstienciaPassageiro();
-        veiculos = new PersistenciaVeiculo();
 
-        PersistenciaMotorista.forEach(motoristas -> motoristas.toString);
 
-        veiculos.carregaVeiculo("pathToCsv");
-        passageiros.carregaPassageiro("pathToCsv");
-        motoristas.carregaMotorista("pathToCsv");
+        Path veiculosPath = Paths.get("Veiculo.csv").toAbsolutePath();
+        Path motoristasPath = Paths.get("Motorista.csv").toAbsolutePath();
+        Path passageirosPath = Paths.get("Passageiro.csv").toAbsolutePath();
 
-        for(Veiculos v : veiculos){
+
+        veiculos = new PersistenciaVeiculo().carregaVeiculo(veiculosPath.toString().replace('/', '\\'));
+        motoristas = new PersistenciaMotorista().carregaMotorista(motoristasPath.toString().replace('/', '\\'));
+        passageiros = new PersistenciaPassageiro().carregaPassageiro(passageirosPath.toString().replace('/', '\\'));
+
+        for(Veiculo v : veiculos){
             v.toString();
         }
 
-        for(Passageiros p : passageiros){
+        for(Passageiro p : passageiros){
             p.toString();
         }
 

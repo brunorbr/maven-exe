@@ -45,8 +45,8 @@ public class Passageiro {
 
     @Override
     public String toString(){
-        return "======Passageiro======
-        CPF: " + getCpf() +
+        return "======Passageiro======" +
+        "CPF: " + getCpf() +
         "Nome: " + getNome() +
         "Forma de Pagamemto: " + getFormaPgto() +
         "Numero do Cartao: " + getCartao();
